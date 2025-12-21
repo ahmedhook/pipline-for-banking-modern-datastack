@@ -17,6 +17,10 @@ Pipeline Flow:
 5- dbt  transformation build marts and staging and snapshots  SCD type-2
 6- CI/CD with github actions and tests and deployment
 
+
+
+
+
 Tech Stack
 
 1- postgres : source oltp system
@@ -31,6 +35,14 @@ Tech Stack
 
 
 
+
+
+
+
+
+
+
+
 Key features
 
 1- postgressql OLTP : source relational database with ASID guarantees (customer account transaction)
@@ -42,31 +54,64 @@ Key features
 7- CI/CD pipline using github action 
 
 
+
+
+
+
+
+
+
+
+
+
+
 Step-by-Step Implementation
 1- Data Simulation
 Generated synthetic banking data (customers, accounts, transactions) using Faker.
 Inserted data into PostgreSQL (OLTP) so the system behaves like a real transactional database (ACID, constraints).
 Controlled generation via config.yaml
 
+
+
+
+
+
 2- Kafka + Debezium CDC
 Set up Kafka Connect & Debezium to capture changes from Postgres.
 Streamed CDC events into MinIO.
+
+
+
+
+
 
 3- Airflow Orchestration
 Built DAGs to:
 Ingest MinIO data > Snowflake (Bronze)
 Schedule snapshots & incremental loads
 
+
+
+
+
+
 4- Snowflake Warehouse
 Organized into Bronze > Silver > Gold layers
 Created staging schemas for ingestion.
+
+
+
 
 5- DBT Transformations
 Staging models > cleaned source data
 Dimension & fact models > built marts
 Snapshots > tracked history of accounts & customers
 
+
+
+
 6- CI/CD with GitHub Actions
 ci.yml  dbt compile, run tests
 cd.yml Deploy DAGS DBT models 
+
 
