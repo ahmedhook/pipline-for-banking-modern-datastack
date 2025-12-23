@@ -8,11 +8,7 @@ Architecture
 
 <img width="781" height="495" alt="Screenshot From 2025-12-10 16-04-07" src="https://github.com/user-attachments/assets/ab23fe27-3ba2-42b2-a16b-3bfb3610d8d0" />
 
-A7MED _EZZAT, [12/22/25 10:20 PM]
-https://www.linkedin.com/posts/ahmed-ezzat-a6b84b277_%D9%81%D9%8A-project-%D8%AF%D9%87-%D8%B9%D9%85%D9%84%D8%AA-pipline-%D9%83%D8%A7%D9%85%D9%84-%D9%8A%D8%AD%D8%A7%D9%83%D9%8A-%D9%86%D8%B8%D8%A7%D9%85-activity-7408964175860899840-jIML?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOUJDMBlY5ptydLeVm4NRQvymARdtCts0A
 
-A7MED _EZZAT, [12/23/25 2:11 AM]
-# Data Engineering Pipeline Project
 
 ## 📌 Pipeline Flow
 
@@ -79,3 +75,4 @@ A7MED _EZZAT, [12/23/25 2:11 AM]
 ### 6️⃣ CI/CD with GitHub Actions
 - ci.yml: dbt compile and run tests
 - cd.yml: deploy Airflow DAGs and dbt models
+
